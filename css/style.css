@@ -1,0 +1,292 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    color: #5a5a5a;
+    height: 100%;
+    width:100%;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fcfcfc;
+    position: relative;
+}
+
+.container{
+    padding: 0;
+}
+
+a {
+    color: rgba(178, 224, 224, 1);
+}
+
+a:hover {
+    color: rgb(19, 97, 97);
+}
+
+/*Image Crawl sizing*/
+
+html{height:100%;}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+.full-width{width:100%;height:100%;background-position:center;background-size:cover;}
+.horizontal{width:100%;}
+
+@font-face {
+    font-family: 'Learning Curve';
+    src: url(../fonts/LearningCurve_OT.otf);
+}
+
+/*HEADER STUFF --------------------------------------------------------->*/
+
+.full-wrapper {
+height: calc(100% - 70px);
+height: -o-calc(100% - 70px); /* opera */
+height: -webkit-calc(100% - 70px); /* google, safari */
+height: -moz-calc(100% - 70px); /* firefox */
+    width: 100%;
+/*  margin-bottom: 60px;*/
+}
+
+.caption {
+    float: right;
+}
+.caption { 
+    height: 30%;
+    position: absolute;
+    right: calc(100% - 40%);
+    right: -o-calc(100% - 40%); /* opera */
+    right: -webkit-calc(100% - 40%); /* google, safari */
+    right: -moz-calc(100% - 40%); /* firefox */
+    left: 0%;
+    bottom: calc(100% - 30%);
+    bottom: -o-calc(100% - 30%); /* opera */
+    bottom: -webkit-calc(100% - 30%); /* google, safari */
+    bottom: -moz-calc(100% - 30%); /* firefox */
+    font-family: 'Amatic SC', cursive;
+}
+
+.title {
+    min-width: 200px;
+    max-width:450px;
+    width: 80%;
+    padding: 6% 0 0 6%;
+    display: block;
+}
+
+/*NAVBAR STUFF --------------------------------------------------------->*/
+
+#navbar-wrapper.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-default {
+    padding-top: 5px;
+    height: 70px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 27px;
+    color: #fff !important;
+	background-color: rgba(54, 160, 152, 0.93);
+/*
+    -webkit-box-shadow: 0 4px 4px -2px #6e6e6e;
+    -moz-box-shadow: 0 4px 4px -2px #6e6e6e;
+    box-shadow: 0 4px 4px -2px #6e6e6e;
+*/
+	border: none;
+    border-radius: 0;
+}
+/*
+.navbar-header{
+    height: 70px;
+}
+*/
+.navbar-default .navbar-text {
+	color: #fff;
+}
+.navbar-default .nav-justified > li > a {
+	color: #fff ;
+}
+.navbar-default .nav-justified>.active>a {
+    text-decoration: underline;
+    background-color: transparent;
+}
+/*what the BOXES do when you hover over them*/
+.navbar-default .nav-justified > li > a:hover, .navbar-default .nav-justified > li > a:focus {
+	text-decoration: underline;
+    color: #fff !important;
+    background-color: transparent;
+}
+.navbar-default .nav-justified > .active > a, .navbar-default .nav-justified > .active > a:hover, .navbar-default .nav-justified > .active > a:focus {
+	color: #fff;
+	background-color: transparent;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .nav-justified .open .dropdown-menu > li > a {
+		color: #6e6e6e;
+	}
+	.navbar-default .nav-justified .open .dropdown-menu > li > a:hover, .navbar-default .nav-justified .open .dropdown-menu > li > a:focus {
+		color: #f0f0f0;
+	}
+	.navbar-default .nav-justified .open .dropdown-menu > .active > a, .navbar-default .nav-justified .open .dropdown-menu > .active > a:hover, .navbar-default .nav-justified .open .dropdown-menu > .active > a:focus {
+		color: #f0f0f0;
+		background-color: #6e6e6e;
+	}
+}
+
+/*GENERAL CONTENT STUFF --------------------------------------------------------->*/
+
+.full-page{
+    height: 115%;
+    width: 100%;
+    display: table;
+}
+
+.centered-content{
+    margin-top: 35px;
+    display: table-cell;
+/*    text-align: center;*/
+    vertical-align: middle;
+}
+
+.content-block{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/*SLIDE1 STUFF --------------------------------------------------------->*/
+
+.slide1{
+    background-color: #efefef;
+}
+
+/*SLIDE2 STUFF --------------------------------------------------------->*/
+
+.slide2{
+    background-color: rgba(178, 224, 224, 1);
+}
+
+.slide2-header{
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 4.5em;
+    color: #292929;
+    margin-bottom: 15px;
+}
+
+.slide2-subtitle{
+    font-family: 'Learning Curve', cursive;
+    color: #292929;
+    font-size: 2.5em;
+    text-transform: lowercase;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.content-links{
+    margin-top: 40px;
+    height: 80px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(54, 160, 152, 1);
+}
+
+.slide2-title{
+    margin-top: 120px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.slide2 .content-block{
+    max-width: 1000px;
+}
+
+.location{
+    margin-top: 60px;
+    height: 70px;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(54, 160, 152, 1);
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.location:hover{
+    background-color: #fff;
+}
+
+.location-links{
+    padding: 0 15px;
+}
+
+.content-links li{
+    text-decoration: none
+}
+
+/*SLIDE3 STUFF --------------------------------------------------------->*/
+
+.slide3{
+    background-color: rgb(19, 97, 97);
+}
+
+            /*image gallery specifics--------------------->*/
+
+.thumb-image{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.thumb-image:hover{
+    opacity: .5;
+}
+
+.thumb-container{
+    padding: 8px
+}
+
+/*SLIDE4 STUFF --------------------------------------------------------->*/
+
+.slide4{
+    background-color: #efefef;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 2em;
+}
+
+/*FOOTER STUFF --------------------------------------------------------->*/
+
+footer {
+    height: 70px;
+    width: 100%;
+    display: table;
+/*    width: 90%;*/
+    margin: auto;
+    background-color: rgba(54, 160, 152, 0.93);
+    color: #fff;
+    text-transform: lowercase;
+    font-size: 1.5em;
+    font-family: 'Learning Curve', cursive;
+}
+
+footer .content-block {
+    padding-top: 15px;
+    text-align: left;
+}
