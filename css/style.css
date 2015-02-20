@@ -522,8 +522,7 @@ height: -moz-calc(100% - 70px); /* firefox */
 
 .form-legend{
     font-weight: 700;
-    font-size: 3.5em;
-    line-height: 2em;
+    font-size: 3em;
 }
 
 #contactForm{
@@ -531,8 +530,8 @@ height: -moz-calc(100% - 70px); /* firefox */
     border-color: transparent;
 }
 
-control-group{
-    font-size: 2em;
+.control-group{
+    font-size: 1.5em;
     line-height: 1.5em;
 }
 
