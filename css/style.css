@@ -517,22 +517,23 @@ height: -moz-calc(100% - 70px); /* firefox */
     background-color: #efefef;
     font-family: 'Amatic SC', cursive;
     text-align: center;
-    font-size: 2em;
 }
 
 .form-legend{
+    border: none;
     font-weight: 700;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 #contactForm{
     background-color: transparent;
     border-color: transparent;
+    border: none;
 }
 
 .form-control{
-    font-size: 1.5em;
-    line-height: 1.5em;
+    font-size: 1.5em !important;
+    line-height: 1.5em !important;
 }
 
 .question{
