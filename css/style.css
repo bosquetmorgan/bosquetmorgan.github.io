@@ -530,7 +530,7 @@ height: -moz-calc(100% - 70px); /* firefox */
     border-color: transparent;
 }
 
-.control-group{
+.form-control{
     font-size: 1.5em;
     line-height: 1.5em;
 }
