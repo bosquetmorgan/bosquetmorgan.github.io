@@ -520,9 +520,15 @@ height: -moz-calc(100% - 70px); /* firefox */
     font-size: 2em;
 }
 
+.form-legend{
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 3em;
+}
+
 #contactForm{
-    background-color: none;
-    border-color: none;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .question{
