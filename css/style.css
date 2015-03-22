@@ -458,7 +458,7 @@ height: -moz-calc(100% - 70px); /* firefox */
     line-height: 306px;
     overflow-y: hidden;
     height: 100%;
-    background-image: url(/img/outdoor-seating.jpg);
+    background-image: url("./img/outdoor-seating.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -602,7 +602,7 @@ height: -moz-calc(100% - 70px); /* firefox */
 }
 
 .legend{
-    border-bottom: hidden !important;
+    border-style: hidden !important;
 }
 
 .Registry-Legend{
