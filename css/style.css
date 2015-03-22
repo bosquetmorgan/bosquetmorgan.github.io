@@ -590,6 +590,25 @@ height: -moz-calc(100% - 70px); /* firefox */
     margin-bottom: 20px;
 }
 
+
+/*SLIDE5 STUFF --------------------------------------------------------->*/
+
+.Registry-Legend{
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+    text-align: center;
+}
+
+.registry_subtitle{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    color: #292929;
+    font-size: 1em;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+
 /*FOOTER STUFF --------------------------------------------------------->*/
 
 footer {
