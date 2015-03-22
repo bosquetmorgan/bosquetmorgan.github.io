@@ -593,9 +593,21 @@ height: -moz-calc(100% - 70px); /* firefox */
 
 /*SLIDE5 STUFF --------------------------------------------------------->*/
 
+.slide5{
+    background-color: rgba(178, 224, 224, 1);
+}
+
+.slide5 .row{
+    margin-top: 50px;
+}
+
+.legend{
+    border-bottom: hidden !important;
+}
+
 .Registry-Legend{
     font-family: 'Amatic SC', cursive;
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
 }
 
