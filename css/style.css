@@ -68,10 +68,10 @@ a:hover {
         font-size: 1.0em; /* default size */
         }
     .slide1{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .slide2-text p {
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     }
     .ranch-photo{
         line-height: 200px !important;
@@ -367,11 +367,11 @@ height: -moz-calc(100% - 70px); /* firefox */
 
 /*SLIDE2 STUFF --------------------------------------------------------->*/
 
-/*
 .content-location{
-    padding: 200px 0;
+/*    padding: 200px 0;*/
+    height: 60%;
+    padding: 20% 0;
 }
-*/
 
 .slide2{
     background-color: rgba(178, 224, 224, 1);
@@ -402,7 +402,7 @@ height: -moz-calc(100% - 70px); /* firefox */
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
     color: #292929;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align: justify;
     margin-top: 15px;
 }
@@ -447,7 +447,7 @@ height: -moz-calc(100% - 70px); /* firefox */
 .ranchweb{
     margin-top: 10px !important;
     width: 100% !important;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .location-extra {
@@ -458,9 +458,10 @@ height: -moz-calc(100% - 70px); /* firefox */
     line-height: 306px;
     overflow-y: hidden;
     height: 100%;
-    background-image: url("./img/outdoor-seating.jpg");
+    background-image: url("../img/outdoor-seating.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right;
 }
 
 .ranch-photo-container{
@@ -590,19 +591,58 @@ height: -moz-calc(100% - 70px); /* firefox */
     margin-bottom: 20px;
 }
 
+.contact-submit{
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 0;
+    border: none;
+/*    border: 5px solid rgba(178, 224, 224, 1);*/
+    background-color: rgba(54, 160, 152, 1);
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.contact-submit:hover{
+    background-color: #fff;
+    border: none;
+    color: rgb(54, 160, 152);
+}
+
+#success{
+    font-size: 1.2em;
+}
+
 
 /*SLIDE5 STUFF --------------------------------------------------------->*/
 
 .slide5{
+    padding-top: 89px;
     background-color: rgba(178, 224, 224, 1);
 }
 
 .slide5 .row{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-.legend{
-    border-style: hidden !important;
+.amazon-registry{
+    text-align: center;
+    opacity: .8;
+    margin-top: 40px;
+}
+
+.contributionstitle {
+    text-align: center;
+    margin-top: 100px;
+    color: rgba(54, 160, 152, 1);
+    font-family: 'Amatic SC', cursive;
+    font-size: 4em;
+}
+
+legend{
+    border-style: none !important;
 }
 
 .Registry-Legend{
@@ -618,6 +658,177 @@ height: -moz-calc(100% - 70px); /* firefox */
     font-size: 1em;
     text-align: justify;
     margin-top: 15px;
+}
+
+.giftlink{
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(54, 160, 152, 1);
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.slide5 h2{
+    margin-top: 5px !important;
+    font-family: 'learning_curve_proregular', cursive;
+    font-size: 2.5em;
+}
+
+/*
+.simpleCart_shelfItem{
+    text-align: center;
+}
+*/
+
+.item_add{
+    position: relative;
+    top: 3px;
+    padding: 0px 20px;
+}
+
+.item_add:hover{
+    background-color: #f0f0f0;
+}
+
+.item_name, .item_price,.multiply,S .item_quantity, .item_add{
+    margin: 0 5px;
+}
+
+.box-title{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+}
+
+/*SIMPLE CART STUFF --------------------------------------------------------->*/
+
+.cartbox a{
+    color: rgb(19, 97, 97);
+    text-decoration: none;
+}
+
+.pull-middle{
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.slide5 a:hover{
+    text-decoration: none;
+    
+}
+
+.cartbox{
+    padding: 10px 0;
+    margin-top: 100px !important;
+    margin-bottom: 50px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+}
+
+.headerRow{
+    display: none;
+}
+
+.simpleCart_items{
+    width: 100% !important;
+    height: auto !important;
+    color: rgb(19, 97, 97);
+}
+
+.item-increment, .item-decrement{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: center;
+    background-color: rgba(178, 224, 224, 1);
+}
+
+.item-increment:hover, .item-decrement:hover{
+    background-color: white;
+}
+
+.item-name{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.8em!important;
+    padding-right: 10px !important;
+}
+
+.item-total{
+    padding-left: 10px !important;
+}
+
+.item-price{
+    display:none !important;
+}
+
+.item-remove{
+    display: block !important;
+    margin-top: 5px !important;
+    font-size: .8em!important;
+}
+
+.item_Quantity{
+    width: 30px;
+    text-align: center;
+}
+
+.itemRow div{
+    display: inline-block;
+    padding: 0 5px;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.cartHeaders,.totalRow{display:none;}
+.simpleCart_items{
+    overflow-y:auto;
+    overflow-x:hidden;
+    height:324px;
+    width:243px;
+    margin-bottom:20px;
+}
+.itemContainer{
+    clear:both;
+    width:229px;
+    padding:11px 0;
+    font-size:11px;
+}
+.itemImage{
+    float:left;
+    width:60px;
+}
+.itemName{
+    float:left;
+    width:85px;
+}
+.itemPrice{
+    float:left;
+    width:85px;
+    color:#418932;
+}
+.itemQuantity{
+    float:left;
+    width:33px;
+    margin-top:-12px;
+    vertical-align:middle;
+}
+.itemQuantity input{
+    width:20px;
+    border:1px solid #ccc;
+    padding:3px 2px;
+}
+
+.itemTotal{
+    float:left;
+    color:#c23f26;
+    margin-top:-6px
 }
 
 

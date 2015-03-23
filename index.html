@@ -18,6 +18,8 @@
     <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/simpleCart.js"></script>
+	
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script type="text/javascript">
             $( document ).ready(function() {
@@ -27,6 +29,12 @@
                     }
                 });
             });
+            simpleCart({
+                checkout: { 
+                    type: "PayPal" , 
+                    email: "thehappycouple@arianeanddustyn.com" 
+                }
+            });	
     </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -123,7 +131,7 @@
                             <div class="ranch-photo">&nbsp;</div></div>
                         <div class="col-sm-5 col-sm-height col-top slide2-text"><p class="address">For overnight stays, there are a couple options:</p><p>
 We have the location rented out for the night, and there is a camping area for those who want to camp or bring an RV. We should be able to fit quite a few people, but space is not unlimited so please let us know if you would like to do this. </p><p>
-There is a Best Western about 8 miles down the road, and we have reserved a block of rooms for the wedding:</p>
+There is a Best Western about 8 miles down the road, and we have reserved a block of rooms for the wedding (if you would like to use the block, please call the hotel):</p>
                             <div class="col-sm-12 pull-bottom links-container">
                     <div class="btn-group btn-group-justified">
                       
@@ -165,15 +173,16 @@ There is a Best Western about 8 miles down the road, and we have reserved a bloc
             
         <div id="rsvp_page" class="full-page slide4">
             <div class="centered-content">
-                <div class="content-block content-location">
+                <div class="content-block">
                     <div class="col-sm-10 col-sm-offset-1 slide4-content">
 <!--
 ////////////////////////////////////////////////////////////////////////
                             //FORM START//    ////////////////////////////////////////////////////////////////////////
 -->
-                        <form name="sentMessage" class="well" id="contactForm"  novalidate>
+                        <form name="sentMessage" id="contactForm"  novalidate>
                             <legend class="form-legend">RSVP</legend>
                             <p class="deadline">Please respond by April 23rd</p>
+                            <p class="deadline">This form doesn't work yet! Please come back soon.</p>
                             <div class="control-group">
                                 <div class="controls">
                                     
@@ -276,7 +285,7 @@ There is a Best Western about 8 miles down the road, and we have reserved a bloc
                                     </div>
                                		 
                             <div id="success"> </div> <!-- For success/fail messages -->
-                            <button type="submit" class="btn btn-primary pull-center">Send</button><br />
+                            <button type="submit" class="btn btn-primary pull-center contact-submit">Send</button><br />
                         </form>
                          </div>
                     </div>
@@ -284,35 +293,134 @@ There is a Best Western about 8 miles down the road, and we have reserved a bloc
             </div><!-- /.centered-content -->
         </div><!-- /.full-page slide4 -->
             
-        <div class="full-page slide5">
+        <div id="gifts" class="full-page slide5">
             <div class="centered-content">
-                <div id="registry" class="content-block gifts">
+                <div id="registry" class="content-block">
 
-                    <legend class="Registry-Legend">Our Registry</legend>
-                    <div class="registry_subtitle">Here are a few words about how we've chosen to go in a differen direction with our registry. Since we are already living together and have no need for most household items, we would prefer contributions towards making two dreams come true. We've worked very hard to remodel our fixer-upper home, and are so proud to have a welcoming and comfortable house, and so grateful for the help we received from family members in the process. To match the new inside of our house, we've been saving for and planning the building of a deck for the backyard, and we would be so happy for any help in making this happen. We're also so excited about finally taking some vacation for our honeymoon, and are trying to fit in as much fun and relaxation as possible. If you would like to make a gift, you may contribute to either of our dreams by choosing any options below, or consult our amazon registry at [link here].</div>
-                    <div class="row amazon-registry"><div class="column-sm-12">
-                    <a href="http://www.amazon.com/gp/registry/wedding/VBVJ98TNTSHA/ref=cm_sw_em_r_wrg_TYKcvb0QZPCCK_wb">
-<img border="0" alt="Registry" src="img/amazon_icon.png" width="100" height="auto">
-</a></div></div>
+                    <legend  class="Registry-Legend">Our Registry</legend>
+                    <div class="registry_subtitle">Since we are already settled in a house, we have already acquired most household items that we need and would love to have contributions towards making two of our dreams come true. We’ve worked very hard to remodel our fixer-upper home, and we are so proud of it and grateful for the help we’ve received from family members in the process. To match the new inside of our house, we’ve been saving and planning for the building of a deck for the backyard. We can’t wait to host BBQs in the warm summer months and would be so happy for any help in making this happen. We’re also very excited about finally taking some vacation for our honeymoon, and are trying to fit in as much fun and relaxation as possible. If you would like to make a gift, you may contribute to either of our dreams by choosing any options below, or if you would prefer we also have an amazon registry for more traditional gifts (click on the "a" below).</div>
+                    <div class="amazon-registry">
+                    <a target="_blank" href="http://www.amazon.com/gp/registry/wedding/VBVJ98TNTSHA/ref=cm_sw_em_r_wrg_TYKcvb0QZPCCK_wb">
+<img border="0" class="amazon-image" alt="Registry" src="img/amazon_icon.png" width="70" height="auto">
+</a></div>
                     <div class="deck">
-                        <div class="row giftitem lumber">
-                            <div class="col-xs-4 speech">
-                                <div class="bubble b-left">First and foremost to build our deck, we need lumber! This contribution is for lumber.</div>
+                        <div class="contributionstitle">Our Dream Deck</div>
+                        <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 giftitem posts">
+                            <div class="col-xs-4 speech pull-middle">
+                                <div class="bubble b-left">For a strong deck we need a good foundation. This contribution is for posts.</div>
                                 
-                            </div>
-                            <div class="col-xs-4 paypalbutton">
-                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                        <input type="hidden" name="cmd" value="_s-xclick">
-                                        <input type="hidden" name="hosted_button_id" value="QS6LMPYUUXSQN">
-                                        <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                                        </form>
-                                </div>
-                            <div class="col-xs-4 gifticons">
+                            </div><!-- ... --><div class="col-xs-4 gifticons pull-middle">
                                 
-                                        <div class="lumbericon">&nbsp;</div>
-                            </div>
+                                        <div class="posticon"><img class="center-block" src="img/posts.png" style="width:80%; height:auto;"></div>
+                            </div><!-- ... --><div class="col-xs-4 simpleCart_shelfItem pull-middle">
+                                <h2 class="item_name"> Posts </h2>
+                                <span class="item_price">$25</span> <span class="multiply">X</span>
+                                <input type="text" value="1" class="item_Quantity">
+                                <a class="item_add giftlink" href="javascript:;"> add </a>
+	</div>
                         </div> <!-- /.col-md-6 -->
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 giftitem railings">
+                            <div class="col-xs-4 speech pull-middle">
+                                <div class="bubble b-left">We can wait to put flowers along these deck edges. This contribution is for railings.</div>
+                                
+                            </div><!-- ... --><div class="col-xs-4 gifticons pull-middle">
+                                
+                                        <div class="railingicon"><img class="center-block" src="img/railing.png" style="width:80%; height:auto;"></div>
+                            </div><!-- ... --><div class="col-xs-4 simpleCart_shelfItem pull-middle">
+                                <h2 class="item_name"> Railings </h2>
+                                <span class="item_price">$50</span> <span class="multiply">X</span>
+                                <input type="text" value="1" class="item_Quantity">
+                                <a class="item_add giftlink" href="javascript:;"> add </a>
+	</div>
+                        </div> <!-- /.col-md-6 -->
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 giftitem lumber">
+                            <div class="col-xs-4 speech pull-middle">
+                                <div class="bubble b-left">Obviously, to build our deck, we need lumber! This contribution is for lumber.</div>
+                                
+                            </div><!-- ... --><div class="col-xs-4 gifticons pull-middle">
+                                
+                                        <div class="lumbericon"><img class="center-block" src="img/lumber.png" style="width:80%; height:auto;"></div>
+                            </div><!-- ... --><div class="col-xs-4 simpleCart_shelfItem pull-middle">
+                                <h2 class="item_name"> Lumber </h2>
+                                <span class="item_price">$100</span> <span class="multiply">X</span>
+                                <input type="text" value="1" class="item_Quantity">
+                                <a class="item_add giftlink" href="javascript:;"> add </a>
+	</div>
+                        </div> <!-- /.col-md-6 -->
+                        </div>
+                        
+                       
+                    </div>
+                    
+                    <div class="honeymoon">
+                        <div class="contributionstitle">Our Dream Honeymoon</div>
+                        <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 giftitem snorkeling">
+                            <div class="col-xs-4 speech pull-middle">
+                                <div class="bubble b-left">We really don't want to miss out on this in Hawaii. This contribution is for snorkeling.</div>
+                                
+                            </div><!-- ... --><div class="col-xs-4 gifticons pull-middle">
+                                
+                                        <div class="snorkelicon"><img class="center-block" src="img/snorkel.png" style="width:80%; height:auto;"></div>
+                            </div><!-- ... --><div class="col-xs-4 simpleCart_shelfItem pull-middle">
+                                <h2 class="item_name"> Snorkeling </h2>
+                                <span class="item_price">$1</span> <span class="multiply">X</span>
+                                <input type="text" value="1" class="item_Quantity">
+                                <a class="item_add giftlink" href="javascript:;"> add </a>
+	</div>
+                        </div> <!-- /.col-md-6 -->
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 giftitem dinner">
+                            <div class="col-xs-4 speech pull-middle">
+                                <div class="bubble b-left">We're looking forward to romantic evenings, and delicious food. This contribution is for dinner for two.</div>
+                                
+                            </div><!-- ... --><div class="col-xs-4 gifticons pull-middle">
+                                
+                                        <div class="dinnericon"><img class="center-block" src="img/dinner.png" style="width:80%; height:auto;"></div>
+                            </div><!-- ... --><div class="col-xs-4 simpleCart_shelfItem pull-middle">
+                                <h2 class="item_name"> Dinner </h2>
+                                <span class="item_price">$75</span> <span class="multiply">X</span>
+                                <input type="text" value="1" class="item_Quantity">
+                                <a class="item_add giftlink" href="javascript:;"> add </a>
+	</div>
+                        </div> <!-- /.col-md-6 -->
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 giftitem lumber">
+                            <div class="col-xs-4 speech pull-middle">
+                                <div class="bubble b-left">Since we both love riding motorcycles, we are both so excited to take a motorcycle tour of the island.</div>
+                                
+                            </div><!-- ... --><div class="col-xs-4 gifticons pull-middle">
+                                
+                                        <div class="bikeicon"><img class="center-block" src="img/cycle.png" style="width:80%; height:auto;"></div>
+                            </div><!-- ... --><div class="col-xs-4 simpleCart_shelfItem pull-middle">
+                                <h2 class="item_name"> Bike Tour </h2>
+                                <span class="item_price">$125</span> <span class="multiply">X</span>
+                                <input type="text" value="1" class="item_Quantity">
+                                <a class="item_add giftlink" href="javascript:;"> add </a>
+	</div>
+                        </div> <!-- /.col-md-6 -->
+                        </div>
+                        
+                        <div class="row cartbox">
+                            <div class="col-xs-12 box-title">Summary of Contributions</div>
+                                                       
+                            <!--Add a Div with the class "simpleCart_items" to show your shopping cart area.-->
+				<div class="simpleCart_items" >
+				</div>
+				
+				
+				<!--Here's the Links to Checkout and Empty Cart-->
+				<div class="col-xs-12">
+                            <a href="#" class="simpleCart_empty">Clear Contributions</a>&nbsp;
+				<a href="#"  class="simpleCart_checkout pull-right">Checkout</a></div>
+                        </div>
                     </div>
 
                     

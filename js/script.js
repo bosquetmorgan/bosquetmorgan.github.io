@@ -121,11 +121,7 @@ $(function() {
         var name = first_name + last_name;
         var guest_name = guest_first_name + ' ' + guest_last_name;
         
-        console.log("Passing name: " + first_name + ", " + last_name + ", email: " + email + ", message: " + message + ", attend: " + attend + ", guest name: " + guest_first_name + ", " + guest_last_name + ", guest_email: " + guest_email + ", guest attend: " + guest_attend + ", arrangements: " + arrangements + " ...through ajax. Proceed = ");
-         
-         //add object to responses array
-//         responses.window[name] = new response(first_name, last_name, attend, email, guest_attend, guest_name, guest_email, arrangements, message);
-         
+        console.log("Passing name: " + first_name + ", " + last_name + ", email: " + email + ", message: " + message + ", attend: " + attend + ", guest name: " + guest_first_name + ", " + guest_last_name + ", guest_email: " + guest_email + ", guest attend: " + guest_attend + ", arrangements: " + arrangements + " ...through ajax. Proceed = " + proceed);        
          
          if(proceed !== false){
 	 $.ajax({
@@ -139,7 +135,8 @@ $(function() {
             	   $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             		.append( "</button>");
             	  $('#success > .alert-success')
-            		.append("<strong>Your message has been sent. </strong>");
+            		.append("<strong>Sorry "+first_name+" it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:thehappycouple@arianeanddustyn.com?Subject=Message_Me from arianeanddustyn.com'>thehappycouple@arianeanddustyn.com</a> ? Sorry for the inconvenience!"); //force error until servers work again!
+//                    .append("<strong>Your message has been sent. </strong>");
  		  $('#success > .alert-success')
  			.append('</div>');
  						    
@@ -151,7 +148,7 @@ $(function() {
  		 $('#success').html("<div class='alert alert-danger'>");
             	$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             	 .append( "</button>");
-            	$('#success > .alert-danger').append("<strong>Sorry "+first_name+" it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:audrey.bosquet@gmail.com?Subject=Message_Me from arianeanddustyn.com'>audrey.bosquet@gmail.com</a> ? Sorry for the inconvenience!");
+            	$('#success > .alert-danger').append("<strong>Sorry "+first_name+" it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:thehappycouple@arianeanddustyn.com?Subject=Message_Me from arianeanddustyn.com'>thehappycouple@arianeanddustyn.com</a> ? Sorry for the inconvenience!");
  	        $('#success > .alert-danger').append('</div>');
  		//clear all fields
  		$('#contactForm').trigger("reset");
